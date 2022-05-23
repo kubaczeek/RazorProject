@@ -2,12 +2,12 @@
 @model RazorProject.Pages.Products.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Dodaj tutaj swój produkt";
 }
 
-<h1>Create</h1>
+<h1><a asp-page="Index">Open all Products</a></h1>
 
-<h4>Product</h4>
+<h4>Add product to Web</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,6 +19,11 @@
                 <span asp-validation-for="Product.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Product.Photos" class="control-label"></label>
+                <input asp-for="Product.Photos" class="form-control" />
+                <span asp-validation-for="Product.Photos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -26,7 +31,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Open all Products</a>
 </div>
 
 @section Scripts {
